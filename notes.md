@@ -320,17 +320,10 @@ Baseia-se em objetos que encapsulam dados e comportamentos. Promove a reutiliza�
 #
 <div align="center">
 
-<span style="color:red; font-size:32px; font-weight:bold;">
-IMPORTANTE!! 
-</span>
+# 🚨 IMPORTANTE!!
 
-<span style="color:yellow; font-size:22px; font-weight:bold;">
-Struct → copia dados.
-</span>
-
-<span style="color:yellow; font-size:22px; font-weight:bold;">
-Class → copia referência.
-</span>
+## Struct → copia dados.  
+## Class → copia referência.
 
 </div>
 

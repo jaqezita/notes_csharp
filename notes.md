@@ -185,8 +185,149 @@ Baseia-se em objetos que encapsulam dados e comportamentos. Promove a reutiliza�
 
 ##
 
-#### Use class para lógica e comportamento complexo.
+-   #### Use class para lógica e comportamento complexo.
 
-#### Use struct para pequenos conjuntos de dados.
+-   #### Use struct para pequenos conjuntos de dados.
 
-#### Use record para representar dados imutáveis com igualdade por valor.
+-   ####  Use record para representar dados imutáveis com igualdade por valor.
+
+##
+
+## Tipos de Valor (Value Types)
+
+-   A variável contém diretamente os dados.
+
+-   A memória é alocada inline (sem alocação separada no heap).
+
+-    Não há sobrecarga de coleta de lixo.
+
+-   São lacrados: não podem ser herdados.
+
+-   Um `struct` só pode herdar de `System.ValueType`.
+
+-   Podem ser definidos como `record struct`.
+
+    ### Categorias
+
+    -   Struct
+
+    -   Enum
+
+##
+
+###     Struct
+
+-   Usado para pequenos conjuntos de dados relacionados.
+
+-   Armazena os dados diretamente.
+
+    ```csharp
+    public struct Coords
+    {
+        public int x, y;
+
+        public Coords(int p1, int p2)
+        {
+            x = p1;
+            y = p2;
+        }
+    }
+    ```
+
+### Tipos numéricos internos
+
+-   São structs (System.Int32, System.Boolean, etc.).
+
+-   Possuem campos e métodos:
+
+    ```csharp
+    byte b = byte.MaxValue;
+    ```
+-   São usados como tipos simples:
+    
+    ```csharp
+    byte num = 0xA;
+    int i = 5;
+    char c = 'Z';
+    ```
+
+##
+
+### Enum
+
+-   Define constantes integrais nomeadas.
+
+-   Herda de System.Enum → System.ValueType.
+
+    ```csharp
+    public enum FileMode
+    {
+        CreateNew = 1,
+        Create = 2,
+        Open = 3,
+        OpenOrCreate = 4,
+        Truncate = 5,
+        Append = 6,
+    }
+    ```
+
+-   Usar enums melhora a legibilidade do código.
+
+-   Todas as regras de structs também se aplicam a enums.
+
+##
+
+## Tipos de Referência (Reference Types)
+
+-   class
+
+-   record
+
+-   delegate
+
+-   array
+
+-   interface
+
+### Comportamento
+
+-   A variável armazena uma referência (endereço de memória).
+
+-   O valor inicial é null até a instância ser criada.
+
+-   O operador new cria o objeto e retorna a referência.
+
+-   Ao copiar uma variável, apenas a referência é copiada.
+
+-   Ambas apontam para o mesmo objeto na memória.
+
+    -   Exemplo com arrays:
+
+
+        ```csharp
+            int[] numbers;
+            numbers = new int[5];
+
+            int[] numbers2 = new int[] { 1, 2, 3, 4, 5 };
+
+            int[] numbers3 = numbers2;
+        ```
+
+
+        - numbers3 e numbers2 apontam para o mesmo array.
+
+#        
+#
+
+<p align="center">
+
+## Regra de ouro para lembrar  
+
+### Struct copia dados.  
+### Class copia referência.  
+
+</p>
+
+
+#
+#

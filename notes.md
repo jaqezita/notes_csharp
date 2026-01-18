@@ -319,15 +319,14 @@ Baseia-se em objetos que encapsulam dados e comportamentos. Promove a reutiliza�
 #        
 #
 
-<p align="center">
+<div align="center">
 
-## Regra de ouro para lembrar  
+## <span style="color:red;">Regra de ouro para lembrar</span>
 
-### Struct copia dados.  
-### Class copia referência.  
+<span style="color:red;"><strong>Struct copia dados.</strong></span><br>
+<span style="color:red;"><strong>Class copia referência.</strong></span>
 
-</p>
-
+</div>
 
 #
 #

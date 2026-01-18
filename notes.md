@@ -185,8 +185,8 @@ Baseia-se em objetos que encapsulam dados e comportamentos. Promove a reutiliza�
 
 ##
 
-### Use class para lógica e comportamento complexo.
+#### Use class para lógica e comportamento complexo.
 
-### Use struct para pequenos conjuntos de dados.
+#### Use struct para pequenos conjuntos de dados.
 
-### Use record para representar dados imutáveis com igualdade por valor.
+#### Use record para representar dados imutáveis com igualdade por valor.
